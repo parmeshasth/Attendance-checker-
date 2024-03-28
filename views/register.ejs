@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rural development website</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        
+        <img src="./Photos/logo.png" alt="" style="width: 100px;">
+        <ul>
+            <li><a href="./index">Home</a></li>
+          <li><a href="./About">About Us</a></li>
+          <li><a href="./contact">Contact us</a></li>
+          <li><a href="./register">Sign Up</a></li>
+        </ul>
+    </nav>
+   <div class="main" name="main">
+    <input type="checkbox" id="chk" aria-hidden="true"> 
+    <div class="signup" name="signup"> 
+        <form name="register" onsubmit="titleChange()" action="/register" method="post" >
+            <label for="chk" aria-hidden="true">Sign up</label>
+            <input type="text" class="name"name="name" id="name" placeholder="User Name">
+            <input type="number" name="number"placeholder="Mo. Number" size="10" id="num">
+            <input type="email" name="email"placeholder="Email" id="email">
+            <input type="password" name="password"placeholder="password" class="password" id="pass">
+            <input type="password" name="cpassword"placeholder="Confirm Password" class="cpassword" id="cpass">
+            <button type="submit">Sign up</button>
+
+        </form>
+    </div>
+    <div class="login">
+        <form action="/login" method="post">
+            <label for="chk" aria-hidden="true">Login</label>
+            <input type="email" name="email"placeholder="Email" required="">
+            <input type="password" name="password"placeholder="password" required="">
+            <button>Login</button>
+        </form>
+    </div>
+   </div>
+   <script src="./in.js"></script>
+   <script src="/routers/homeRouter.js"></script>
+
+</body>
+</html>

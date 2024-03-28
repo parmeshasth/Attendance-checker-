@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Link Contact.css-->
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body>
+    <!--NavBar-->
+    <nav>
+        <!--Logo of NavBar-->
+        <img src="./Photos/logo.png" alt="" style="width: 100px;">
+        <ul>
+            <li><a href="./index">Home</a></li>
+            <li><a href="./About">About Us</a></li>
+            <li><a href="./contact">Contact us</a></li>
+            <li><a href="./register">Sign Up</a></li>
+        </ul>
+    </nav>
+    <form>
+        <fieldset>
+            <h1>Check Attendance</h1>
+            <h2>Name</h2>
+            <input type="text" placeholder="Enter your name" id="name">
+            <h2>Roll Number</h2>
+            <input type="text" placeholder="Enter your roll number" id="rollNumber">
+            <button style="margin-top: 5px;">Submit</button>
+        </fieldset>
+    </form>
+    <script>
+        let form = document.querySelector('form');
+        form.addEventListener('submit',handleSubmit);
+        function fetchData(name,rollNumber)
+        {
+            fetch('http://localhost:3000/today-attendance')
+                .then(res => res.json()) // Parse the response as JSON
+                .then(data => {
+                    // Iterate over the data array using forEach
+                    data.forEach(item => {
+                        // Do something with each item, such as logging its properties
+                        console.log(name, rollNumber)
+                        if(item.name == name && item.Rnumber == rollNumber){
+                            console.log('Today Student Present In The College');
+                        }
+                    });
+                })
+                .catch(err => {
+                    // Handle any errors that may occur
+                    console.error(err);
+                });
+        }
+        async function handleSubmit(e) {
+            e.preventDefault();
+            let nam = document.getElementById('name').value;
+            let rollNumber = document.getElementById('rollNumber').value;
+            await fetch('http://localhost:3000/today-attendance')
+                .then(res => res.json()) // Parse the response as JSON
+                .then(data => {
+                    // Iterate over the data array using forEach
+                    data.forEach(item => {
+                        // Do something with each item, such as logging its properties
+                        if(nam == item.name && rollNumber == item.Rnumber){
+                            alert(`Student ${nam} present in the college` )
+                        }
+                    });
+                })
+                .catch(err => {
+                    // Handle any errors that may occur
+                    console.error(err);
+                });
+
+          form.reset();  
+        }
+    </script>
+</body>
+
+</html>

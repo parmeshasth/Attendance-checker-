@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Link Contact.css-->
+    <link rel="stylesheet" href="css/add.css">
+</head>
+<body>
+     <!--NavBar-->
+     <nav>
+        <!--Logo of NavBar-->
+        <img src="./Photos/logo.png" alt="" style="width: 100px;">
+        <ul>
+            <li><a href="./index">Home</a></li>
+            <li><a href="./About">About Us</a></li>
+            <li><a href="./contact">Contact us</a></li>
+            <li><a href="./register">Sign Up</a></li>
+        </ul>
+    </nav>
+    <form action="">
+        <fieldset>
+            <h1>Add Attendance</h1>
+            <h2>Enter your name</h2>
+            <input type="text" name="name">
+            <h2>Enter your roll number</h2>
+            <input type="number"name="Rnumber" size="10">
+            <h2>Enter your Email ID</h2>
+            <input type="email"name="Email">
+            <h2>Enter Your Father Name</h2>
+            <input type="text"name="father Name">
+            <h2>Enter Your Mother Name</h2>
+            <input type="text"name="MotherName">
+            <h2>Enter contact number</h2>
+            <input type="number"name="contect number">
+            <h2>Choose a Course:</h2>
+            <select id="courseSelect" name="Course">
+                <option value="0">Select Course:</option>
+                <option value="B.Tech">B.Tech</option>
+                <option value="B.Pharma">B.Pharma</option>
+                <option value="MCA">MCA</option>
+                <option value="MBA">MBA</option>
+                <option value="M.Tech">M.Tech</option>
+            </select>
+            <input type="submit"value="submit">
+ 
+            
+ 
+ 
+        </fieldset>
+    </form>
+    <script>
+        let form = document.querySelector('form');
+        form.addEventListener('submit',handleSubmit);
+
+        function handleSubmit(e){
+            e.preventDefault();
+            let formData = new FormData(form);
+            let data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+           let jsonData = JSON.stringify(data);
+            fetch('http://localhost:3000/today-attendance',{
+                method: 'POST',
+                headers: {
+                    'Content-Type' : 'application/json'
+                },
+                body: jsonData
+            }).then(res => res.json())
+            .then(result => console.log(result)).catch(err=> console.log("ERROR IS OCCURE"));
+            
+            form.reset();
+        }
+
+    </script>
+</body>
+</html>

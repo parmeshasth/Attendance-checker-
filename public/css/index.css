@@ -1,0 +1,74 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("stethoscope.png");
+}
+
+nav ul{
+    display: flex;
+    float: right;
+    margin-right: 50px;
+}
+nav ul li{
+    list-style: none;
+    margin: 30px;
+    font-weight: 600;
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+nav img{
+    margin: 10px;
+}
+main{
+    display: flex;
+    height: 400px;
+}
+.main-section-left{
+    width:40%;
+    margin: 200px;
+    margin-top: 150px;
+}
+.main-section-left .high{
+    font-size: 60px;
+    font-weight: bold;
+    
+}
+.main-section-left button{
+    background-color: rgb(57, 169, 115);
+    padding: 10px 30px;
+    border-radius: 20px;
+    margin:10px  auto;
+    border: 2px solid rgb(57, 169, 115);
+}
+.main-section-right{
+    width: 60%;
+    margin-right: 40px;
+}
+.main-section-right .img1{
+    z-index: 1;
+    height: 0%;
+    width: 0;
+    position: absolute;
+    margin: 15% 4%;
+    
+}
+.main-section-right .img3{
+    z-index: 1;
+    height: 0%;
+    margin: 22.5% 10%;
+    position: absolute;
+   
+}
+.img{
+    z-index: 4;
+    position: relative;
+}
+.BI{
+    position: absolute;
+    margin-left: 300px;
+}

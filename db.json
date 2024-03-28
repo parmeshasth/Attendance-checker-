@@ -1,0 +1,104 @@
+{
+  "today-attendance": [
+    {
+      "id": "434b",
+      "name": "Alok",
+      "Rnumber": "200014013006",
+      "Email": "alokpandey6386561331@gmail.com",
+      "father Name": "Vinay",
+      "MotherName": "Saroj",
+      "contect number": "6386561331",
+      "Course": "B.Tech"
+    },
+    {
+      "id": "0105",
+      "name": "Alok",
+      "Rnumber": "200014013006",
+      "Email": "alokpandey6386561331@gmail.com",
+      "father Name": "Vinay",
+      "MotherName": "Saroj",
+      "contect number": "6386561331",
+      "Course": "MCA"
+    },
+    {
+      "id": "7792",
+      "name": "ayan rub",
+      "Rnumber": "",
+      "Email": "",
+      "father Name": "",
+      "MotherName": "",
+      "contect number": "",
+      "Course": "0"
+    },
+    {
+      "id": "0e26",
+      "name": "ayan rub",
+      "Rnumber": "22001401300017",
+      "Email": "ayanrub80770@gmail.com",
+      "father Name": "abdul rub",
+      "MotherName": "Saroj",
+      "contect number": "8077081861",
+      "Course": "B.Tech"
+    },
+    {
+      "id": "7331",
+      "name": "ayan",
+      "Rnumber": "2200140130017",
+      "Email": "ayanrub80770@gmail.com",
+      "father Name": "Abdul rub",
+      "MotherName": "dfeedfde",
+      "contect number": "8077081861",
+      "Course": "B.Tech"
+    },
+    {
+      "id": "1f05",
+      "name": "Faizan",
+      "Rnumber": "2200140130022",
+      "Email": "faizan80770@gmail.com",
+      "father Name": "Abdul sami",
+      "MotherName": "dfeedfde",
+      "contect number": "8077081861",
+      "Course": "B.Tech"
+    },
+    {
+      "id": "14d8",
+      "name": "Adnan Hussain",
+      "Rnumber": "2200140130004",
+      "Email": "Adnan80770@gmail.com",
+      "father Name": "tariq hussain",
+      "MotherName": "dfeedfde",
+      "contect number": "8077081861",
+      "Course": "B.Pharma"
+    },
+    {
+      "id": "ab1b",
+      "name": "Tanya",
+      "Rnumber": "2200140130054",
+      "Email": "tanya80770@gmail.com",
+      "father Name": "know",
+      "MotherName": "dfeedfde",
+      "contect number": "8077081861",
+      "Course": "B.Tech"
+    },
+    {
+      "id": "de6f",
+      "name": "ayan",
+      "Rnumber": "2200140130017",
+      "Email": "ayanrub80770@gmail.com",
+      "father Name": "asdf",
+      "MotherName": "sdwdw",
+      "contect number": "32435436545",
+      "Course": "B.Tech"
+    },
+    {
+      "id": "d37c",
+      "name": "shavez",
+      "Rnumber": "2200140130047",
+      "Email": "shavez@gmail.com",
+      "father Name": "sads",
+      "MotherName": "dsfd",
+      "contect number": "3243556754",
+      "Course": "B.Tech"
+    }
+  ]
+}
